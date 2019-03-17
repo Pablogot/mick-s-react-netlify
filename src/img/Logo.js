@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState }from 'react'
 
 
 
 const Logo = (props) => {
-  // const { dark } = props;
-  // const [color, setColor] = useState('#fff')
+  const { dark } = props;
+  const [color, setColor] = useState('#fff')
 
+  useEffect(() => setColor( dark ? '#000':'#FFF' ),[dark])
 
   const styles = {
     st0: {
@@ -15,12 +16,9 @@ const Logo = (props) => {
         fill: '#30acb5'
     },
     st2: {
-        fill: '#000'
+        fill: color
     }
   }
-
-  // useEffect(() => setColor( dark ? '#000':'#FFF' ),[dark])
-  
   
    return (
     <svg width="190" height="35">
