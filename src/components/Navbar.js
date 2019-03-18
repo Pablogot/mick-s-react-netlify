@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Logo from "../img/logo.js";
+import Logo from "../img/logo";
 
 const Navbar = class extends React.Component {
   constructor(props) {
