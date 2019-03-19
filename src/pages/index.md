@@ -24,18 +24,17 @@ intro:
     - image: /img/ialicante-mediterranean-homes-475777-unsplash-1-.jpg
       text: >-
         House for sell Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-        luctus venenatis lectus magna fringilla
+        sed do eiusmod tempor. Amet luctus venenatis lectus magna fringilla
     - image: /img/etienne-beauregard-riverin-48305-unsplash.jpg
       text: >-
-        House for sell Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-        luctus venenatis lectus magna fringilla
+        House for sell, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Amet luctus venenatis
+        lectus magna fringilla
     - image: /img/chemex.jpg
       text: >-
-        House for sell Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-        luctus venenatis lectus magna fringilla
+        House for sell ipsum, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Amet luctus venenatis
+        lectus magna fringilla
   heading: What we offer
   description: >
     Varius quam quisque id diam vel quam elementum pulvinar. Condimentum vitae
