@@ -14,7 +14,7 @@ class BlogRoll extends React.Component {
         posts &&
           posts.map(({ node: post }) => (
             <article>
-              <Box background="accent-2" pad="medium" margin="medium" round="small" animation="fadeIn" width="large">
+              <Box background="light-1" pad="medium" margin="medium" round="small" animation="fadeIn" width="large">
                 <p>
                   <Link
                     className="title has-text-primary is-size-4"

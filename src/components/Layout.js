@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 
-import { grommet, Grommet} from "grommet";
+import { grommet, Grommet, ThemeContext} from "grommet";
 
 
 const TemplateWrapper = ({ children }) => {
@@ -48,7 +48,11 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <Navbar />
-      <Grommet theme={grommet}>{children}</Grommet>
+      <Grommet theme={grommet}>
+        <ThemeContext.Extend>
+        {children}
+        </ThemeContext.Extend>
+      </Grommet>
       <Footer />
     </div>
   )
