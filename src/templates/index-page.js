@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { Grid, Button } from 'grommet'
+import { Inspect } from 'grommet-icons';
+
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -16,7 +19,7 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-  <div>
+  <>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -69,7 +72,7 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-10">
               <div className="content">
                 <div className="content">
                   <div className="tile">
@@ -95,24 +98,26 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </div>
+    <Grid margin="medium" justifyContent="center">
+      <h3 className="has-text-weight-semibold is-size-2 has-text-centered">
+        Latest stories
+      </h3>
+      <BlogRoll />
+      <Button
+        icon={<Inspect />}
+        label="More posts"
+        to="/blog"
+        alignSelf="center"
+        fill="false"
+      />
+    </Grid>
+  </>
 )
 
 IndexPageTemplate.propTypes = {

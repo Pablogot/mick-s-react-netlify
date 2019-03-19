@@ -5,6 +5,9 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 
+import { grommet, Grommet} from "grommet";
+
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
@@ -45,7 +48,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <Grommet theme={grommet}>{children}</Grommet>
       <Footer />
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { Grid, Box, } from 'grommet'
 
 class BlogRoll extends React.Component {
   render() {
@@ -8,11 +9,12 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
+      <Grid columns={['medium','medium']} gap="medium">
+      {
+        posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article className="tile is-child box notification">
+            <article>
+              <Box background="accent-2" pad="medium" margin="medium" round="small" animation="fadeIn" width="large">
                 <p>
                   <Link
                     className="title has-text-primary is-size-4"
@@ -28,15 +30,15 @@ class BlogRoll extends React.Component {
                 <p>
                   {post.excerpt}
                   <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                  <Link to={post.fields.slug}>
+                    Read more →
                   </Link>
                 </p>
-              </article>
-            </div>
+              </Box>
+            </article>
           ))}
-      </div>
+      </Grid>
+
     )
   }
 }
