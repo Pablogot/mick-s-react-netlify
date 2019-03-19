@@ -9,8 +9,7 @@ tags:
   - flavor
   - tasting
 ---
-
-![flavor wheel](/img/flavor_wheel.jpg)
+![Image alternative description](/img/patrick-ryan-703016-unsplash.jpg "Image title")
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
