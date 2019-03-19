@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
       {
         posts &&
           posts.map(({ node: post }) => (
-            <article>
+            <article key={post.fields.slug}>
               <Box background="light-1" pad="medium" margin="medium" round="small" animation="fadeIn" width="large">
                 <p>
                   <Link
