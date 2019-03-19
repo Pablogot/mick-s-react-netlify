@@ -1,6 +1,7 @@
 import React from 'react'
+import {Grid} from'grommet'
 
-import Layout from '../../components/Layout'
+// import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
 export default class BlogIndexPage extends React.Component {
@@ -31,7 +32,9 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <BlogRoll />
+        <Grid margin="medium" justifyContent="center">
+          <BlogRoll />
+        </Grid>
       </>
       
     )
