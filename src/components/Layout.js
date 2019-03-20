@@ -7,6 +7,7 @@ import useSiteMetadata from './SiteMetadata'
 
 import { grommet, Grommet, ThemeContext} from "grommet";
 
+console.log('theme -',grommet)
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -49,9 +50,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <Grommet theme={grommet}>
-        <ThemeContext.Extend>
         {children}
-        </ThemeContext.Extend>
       </Grommet>
       <Footer />
     </div>
