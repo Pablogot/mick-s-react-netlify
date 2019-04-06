@@ -35,9 +35,9 @@ intro:
         House for sell ipsum, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Amet luctus venenatis
         lectus magna fringilla
-  heading: What we offer
-  description: >
-    Varius quam quisque id diam vel quam elementum pulvinar. Condimentum vitae
-    sapien pellentesque habitant morbi tristique senectus et. Fringilla est
-    ullamcorper eget nulla. Lacus suspendisse faucibus interdum posuere lorem
-    ipsum dolor sit....
+  heading: Current Listings
+  description: >-
+    This are some of my current listings, for more information check my Real
+    estate page.
+---
+
