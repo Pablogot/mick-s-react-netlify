@@ -2,26 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+import { Grid, Box, Text } from 'grommet'
+
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
+  <Box direction='row-responsive'>
     {gridItems.map(item => (
-      <div key={item.text} className="column is-6">
-        <section className="section">
-          <div className="has-text-centered">
-            <div
-              style={{
-                width: '240px',
-                display: 'inline-block',
-              }}
-            >
+      <Box  key={item.text} pad="medium" margin="medium" round="small" animation="fadeIn" width="large">
+            <Box>
               <PreviewCompatibleImage imageInfo={item} />
-            </div>
-          </div>
-          <p>{item.text}</p>
-        </section>
-      </div>
+            </Box>
+          <Text>{item.text}</Text>
+      </Box>
     ))}
-  </div>
+  </Box>
 )
 
 FeatureGrid.propTypes = {

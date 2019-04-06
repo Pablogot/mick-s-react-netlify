@@ -1,87 +1,62 @@
-import React from "react";
+import React, {Consumer} from "react";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
+import { ResponsiveContext } from 'grommet'
+
+import BurgerNav from '../utils/BurgerNav'
+import NavContent from '../utils/NavContent'
+import NavWrapper from '../style-utils/NavWrapper'
+
+
+
+
 
 const Navbar = class extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       active: false,
-      navBarActiveClass: ""
+      navBarActiveClass: false
     };
+    this.toggleHamburger.bind(this)
   }
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active"
-            })
-          : this.setState({
-              navBarActiveClass: ""
-            });
-      }
-    );
-  };
+    this.setState({ active: !this.state.active })
+  }
 
   render() {
+ 
+
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img
+      <ResponsiveContext.Consumer>
+        {(size) => (
+          <>
+            <NavWrapper size={size}>
+              <Link to="/" className="navbar-item" title="Logo">
+                <img
                   src={logo}
-                  alt="Mick Smith"
-                  style={{ width: '14em', height: '10em' }}
-                />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+                  alt="Mick Smith real estate logo"
+                  style={{ width: '10em'}}
+                  />
+                </Link>
+                {
+                  size === "small" ?
+                    <BurgerNav handler={this.toggleHamburger}/>
+                    : 
+                    <NavContent direction="row" items={this.props.items} />
+                }
+            </NavWrapper>
+            {
+              size === "small" && 
+                this.state.active &&
+                  <NavContent direction="column" items={this.props.items} />
+            }
+          </>
+        )}
+      </ResponsiveContext.Consumer>
     );
   }
 };
