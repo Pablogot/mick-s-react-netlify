@@ -37,7 +37,7 @@ intro:
         lectus magna fringilla
   heading: Current Listings
   description: >-
-    This are some of my current listings, for more information check my Real
+    These are some of my current listings, for more information check my Real
     estate page.
 ---
 
