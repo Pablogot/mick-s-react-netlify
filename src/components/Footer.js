@@ -29,7 +29,7 @@ const StyledNavItems = styled(Anchor)`
 `;
 const StyledSvg = styled.svg`
     width: 100%;
-    height: 10vw;
+    height: 7vw;
   `;
 
 const social = [

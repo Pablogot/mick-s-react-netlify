@@ -75,7 +75,7 @@ export const IndexPageTemplate = ({
           </Box>
         </WrapperBoxSkewed>
         <WrapperBox>
-          <Heading size="medium">Latest stories</Heading>
+          <Heading size="large" alignSelf="center">Blog</Heading>
           <Box margin="medium" justifyContent="center">
             <BlogRoll />
           </Box>

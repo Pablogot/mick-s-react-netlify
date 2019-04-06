@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 const WrapperBoxSkewed = ({ background, children }) => {
     
   const StyledBox = styled(Box)`
+    margin: 10vw 0;
     background: ${background};
     display: flex;
     flex-flow: column;
@@ -14,11 +15,12 @@ const WrapperBoxSkewed = ({ background, children }) => {
     align-items: center;
   `;
   const StyledBoxContent = styled(Box)`
+    margin: 5vw 0;
     width: calc( 100% - 20%);
   `;
   const StyledSvg = styled.svg`
     width: 100%;
-    height: 10vw;
+    height: 7vw;
   `;
   return (
     <StyledBox>

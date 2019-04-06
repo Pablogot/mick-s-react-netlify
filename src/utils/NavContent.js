@@ -1,12 +1,12 @@
-import React from 'react'
-import {Box, Anchor} from 'grommet'
-import styled from '@emotion/styled'
+import React from 'react';
+import {Box, Anchor} from 'grommet';
+import styled from '@emotion/styled';
 
 
 
 const NavContent = ({direction, items}) => {
 
-    const StyledNavItems = styled(Anchor)`
+  const StyledNavItems = styled(Anchor)`
     color: #000;
     display: flex;
     text-decoration: none;
@@ -14,18 +14,18 @@ const NavContent = ({direction, items}) => {
     font-size: 0.8rem;
     margin-left: 2rem;
     font-weight: 600;
-  `
-    return (
-        <Box direction={direction}>
-        {
-        items.map( ({ label , to }) =>(
-            <StyledNavItems key={to} href={to} size="medium" height="100%" margin={{"left": "small"}}>
+  `;
+  return (
+    <Box direction={direction}>
+      {
+        items.map( ({ label, to }) => (
+          <StyledNavItems key={to} href={to} size="medium" height="100%" margin={{'left': 'small'}}>
             {label}
-            </StyledNavItems>
+          </StyledNavItems>
         ))
-        }
-        </Box>
-    )
-}
+      }
+    </Box>
+  );
+};
 
-export default NavContent
+export default NavContent;

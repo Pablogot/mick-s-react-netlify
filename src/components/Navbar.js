@@ -1,11 +1,11 @@
-import React, {Consumer} from "react";
-import { Link } from "gatsby";
-import logo from "../img/logo.svg";
-import { ResponsiveContext } from 'grommet'
+import React, {Consumer} from 'react';
+import { Link } from 'gatsby';
+import logo from '../img/logo.svg';
+import { ResponsiveContext } from 'grommet';
 
-import BurgerNav from '../utils/BurgerNav'
-import NavContent from '../utils/NavContent'
-import NavWrapper from '../style-utils/NavWrapper'
+import BurgerNav from '../utils/BurgerNav';
+import NavContent from '../utils/NavContent';
+import NavWrapper from '../style-utils/NavWrapper';
 
 
 
@@ -17,14 +17,14 @@ const Navbar = class extends React.Component {
     super(props);
     this.state = {
       active: false,
-      navBarActiveClass: false
+      navBarActiveClass: false,
     };
-    this.toggleHamburger.bind(this)
+    this.toggleHamburger.bind(this);
   }
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
-    this.setState({ active: !this.state.active })
+    this.setState({ active: !this.state.active });
   }
 
   render() {
@@ -40,17 +40,17 @@ const Navbar = class extends React.Component {
                   src={logo}
                   alt="Mick Smith real estate logo"
                   style={{ width: '10em'}}
-                  />
-                </Link>
-                {
-                  size === "small" ?
-                    <BurgerNav handler={this.toggleHamburger}/>
-                    : 
-                    <NavContent direction="row" items={this.props.items} />
-                }
+                />
+              </Link>
+              {
+                size === 'small' ?
+                  <BurgerNav handler={this.toggleHamburger}/>
+                  : 
+                  <NavContent direction="row" items={this.props.items} />
+              }
             </NavWrapper>
             {
-              size === "small" && 
+              size === 'small' && 
                 this.state.active &&
                   <NavContent direction="column" items={this.props.items} />
             }
