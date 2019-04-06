@@ -1,18 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import { Box, Button, Heading, Paragraph } from 'grommet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import { Box, Button, Heading, Paragraph } from 'grommet';
 import { Inspect} from 'grommet-icons';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import Layout from '../components/Layout';
+import Features from '../components/Features';
+import BlogRoll from '../components/BlogRoll';
 // Style Utils
-import ContainerBox from '../style-utils/ContainerBox'
-import TopBox from '../style-utils/TopBox'
-import WrapperBox from '../style-utils/WrapperBox'
+import ContainerBox from '../style-utils/ContainerBox';
+import TopBox from '../style-utils/TopBox';
+import WrapperBox from '../style-utils/WrapperBox';
+import WrapperBoxSkewed from '../style-utils/WrapperBoxSkewed';
 
 export const IndexPageTemplate = ({
   image,
@@ -28,7 +29,7 @@ export const IndexPageTemplate = ({
     border: .5rem solid #ffffff;
     background: rgba(0, 0, 0, 0.15);
     transform: skew(-5deg);
-  `
+  `;
   const StyledHeading = styled(Heading)`
     color: white;
     border-bottom: .2rem solid #ffffff;
@@ -36,24 +37,24 @@ export const IndexPageTemplate = ({
     padding: 0.25em;
     font-weight: 200;
     text-transform: uppercase;
-  `
+  `;
   const StyledSubHeading = styled(Heading)`
     color: white;
     line-height: 1;
     padding: 0.25em;
     font-weight: 400;
-  `
+  `;
   const StyliedButton = styled(Button)`
     max-width: 250px;
-  `
+  `;
   const WideParagraph = styled(Paragraph)`
     width: 1200px !important;
-  `
+  `;
   return (
     <>
       <TopBox 
         image={ 
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image 
+          image.childImageSharp ? image.childImageSharp.fluid.src : image 
         }>
         <StyledTopBox>
           <StyledHeading alignSelf="center" size="medium">{title}</StyledHeading>
@@ -65,13 +66,14 @@ export const IndexPageTemplate = ({
           <Heading size="large" alignSelf="center"  style={{maxWidth: 'unset'}}>{mainpitch.title}</Heading>
           <WideParagraph size="xlarge" margin="none"  alignSelf="center">{mainpitch.description}</WideParagraph>
         </WrapperBox>
-        <WrapperBox>
+        <WrapperBoxSkewed 
+          background="rgba(173,241,247,1)">
           <Heading size="medium" alignSelf="center">{heading}</Heading>
           <WideParagraph size="medium" alignSelf="center">{description}</WideParagraph>
           <Box margin="medium" justifyContent="center">
             <Features gridItems={intro.blurbs} />
           </Box>
-        </WrapperBox>
+        </WrapperBoxSkewed>
         <WrapperBox>
           <Heading size="medium">Latest stories</Heading>
           <Box margin="medium" justifyContent="center">
@@ -87,8 +89,8 @@ export const IndexPageTemplate = ({
         />
       </ContainerBox>
     </>
-  )
-}
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -100,10 +102,10 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -117,8 +119,8 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -126,10 +128,10 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -167,4 +169,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

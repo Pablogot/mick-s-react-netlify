@@ -12,4 +12,4 @@ const WrapperBox = ({ children }) => {
 }
 
 
-export default WrapperBox
+export default WrapperBox;
