@@ -11,11 +11,7 @@ const TopBox = ({ image, children }) => {
     display: flex;
     justify-content: center;
   `
-  return (
-    <Box>
-      <StyledBox>{children}</StyledBox>
-    </Box>
-  )
+  return <StyledBox>{children}</StyledBox>
 }
 
 export default TopBox

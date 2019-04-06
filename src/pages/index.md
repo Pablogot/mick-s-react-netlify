@@ -41,22 +41,3 @@ intro:
     sapien pellentesque habitant morbi tristique senectus et. Fringilla est
     ullamcorper eget nulla. Lacus suspendisse faucibus interdum posuere lorem
     ipsum dolor sit....
-main:
-  heading: Sed libero enim sed faucibus turpis in eu mi
-  description: >
-    Elit ut aliquam purus sit amet luctus venenatis lectus magna. Mauris
-    pellentesque pulvinar pellentesque habitant morbi tristique. Nunc id cursus
-    metus aliquam eleifend mi in nulla. Nullam eget felis eget nunc lobortis
-    mattis aliquam faucibus purus. Nunc lobortis mattis aliquam faucibus purus
-    in
-  image1:
-    alt: Nunc lobortis mattis aliquam faucibus purus in
-    image: /img/marion-michele-770316-unsplash.jpg
-  image2:
-    alt: Entry
-    image: /img/yun-xu-649854-unsplash.jpg
-  image3:
-    alt: Wall & sky
-    image: /img/etienne-beauregard-riverin-48305-unsplash.jpg
----
-

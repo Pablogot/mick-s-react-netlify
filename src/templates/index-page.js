@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Grid, Button, Heading, Paragraph } from 'grommet'
+import { Grid, Box, Button, Heading, Paragraph } from 'grommet'
 import { Inspect, Home } from 'grommet-icons';
 import styled from 'styled-components'
 
@@ -22,16 +22,25 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  main,
 }) => {
+  const StyledTopBox = styled(Box)`
+    margin: 0 3rem;
+    border: .5rem solid #ffffff;
+    background: rgba(0, 0, 0, 0.15);
+  `
   const StyledHeading = styled(Heading)`
-    box-shadow: #30acb5 0.5rem 0px 0px, #30acb5 -0.5rem 0px 0px;
-    background-color: #30acb5;
     color: white;
     line-height: 1;
     padding: 0.25em;
+    font-weight: 200;
+    text-transform: uppercase;
   `
-
+  const StyledSubHeading = styled(Heading)`
+    color: white;
+    line-height: 1;
+    padding: 0.25em;
+    font-weight: 400;
+  `
   const StyliedButton = styled(Button)`
     max-width: 250px;
   `
@@ -41,8 +50,10 @@ export const IndexPageTemplate = ({
   return(
     <>
       <TopBox image={ !!image.childImageSharp ? image.childImageSharp.fluid.src : image }>
-        <StyledHeading>{title}</StyledHeading>
-        <StyledHeading>{subheading}</StyledHeading>
+        <StyledTopBox>
+          <StyledHeading alignSelf="center" size="medium">{title}</StyledHeading>
+          <StyledSubHeading alignSelf="center" size="small">{subheading}</StyledSubHeading>
+        </StyledTopBox>
       </TopBox>
       <ContainerBox>
         <WrapperBox>
@@ -52,9 +63,9 @@ export const IndexPageTemplate = ({
         </WrapperBox>
         <WrapperBox>
           <WideParagraph size="medium" alignSelf="center">{description}</WideParagraph>
-          <Grid margin="medium" justifyContent="center">
+          <Box margin="medium" justifyContent="center">
             <Features gridItems={intro.blurbs} />
-          </Grid>
+          </Box>
         </WrapperBox>
         <StyliedButton
             icon={<Home />}
@@ -65,9 +76,9 @@ export const IndexPageTemplate = ({
           />
         <WrapperBox>
           <Heading size="medium">Latest stories</Heading>
-          <Grid margin="medium" justifyContent="center">
+          <Box margin="medium" justifyContent="center">
             <BlogRoll />
-          </Grid>
+          </Box>
         </WrapperBox>
         <StyliedButton
             icon={<Inspect />}
