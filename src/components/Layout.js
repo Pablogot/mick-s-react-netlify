@@ -17,21 +17,13 @@ const TemplateWrapper = ({ children }) => {
       to: '/about'
     },
     {
-      label:'Products', 
-      to: 'products'
-    },
-    {
       label:'Blog', 
       to: 'blog'
     },
     {
       label:'Contact', 
       to: 'contact'
-    },
-    {
-      label:'Examples', 
-      to: '/contact/examples'
-    },
+    }
   ]
   
   return (

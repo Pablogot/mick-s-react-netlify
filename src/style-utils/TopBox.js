@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'grommet'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 const TopBox = ({ image, children }) => {
   const StyledBox = styled(Box)`

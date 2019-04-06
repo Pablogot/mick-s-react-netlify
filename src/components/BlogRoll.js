@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import { ResponsiveContext, Box, Text, Anchor, Paragraph } from 'grommet'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 class BlogRoll extends React.Component {
   render() {

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Grid, Box, Button, Heading, Paragraph } from 'grommet'
-import { Inspect, Home } from 'grommet-icons';
-import styled from 'styled-components'
+import { Box, Button, Heading, Paragraph } from 'grommet'
+import { Inspect} from 'grommet-icons';
+import styled from '@emotion/styled'
 
 
 import Layout from '../components/Layout'
@@ -27,9 +27,11 @@ export const IndexPageTemplate = ({
     margin: 0 3rem;
     border: .5rem solid #ffffff;
     background: rgba(0, 0, 0, 0.15);
+    transform: skew(-5deg);
   `
   const StyledHeading = styled(Heading)`
     color: white;
+    border-bottom: .2rem solid #ffffff;
     line-height: 1;
     padding: 0.25em;
     font-weight: 200;
@@ -47,33 +49,29 @@ export const IndexPageTemplate = ({
   const WideParagraph = styled(Paragraph)`
     width: 1200px !important;
   `
-  return(
+  return (
     <>
-      <TopBox image={ !!image.childImageSharp ? image.childImageSharp.fluid.src : image }>
+      <TopBox 
+        image={ 
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image 
+        }>
         <StyledTopBox>
           <StyledHeading alignSelf="center" size="medium">{title}</StyledHeading>
-          <StyledSubHeading alignSelf="center" size="small">{subheading}</StyledSubHeading>
+          <StyledSubHeading alignSelf="center" size="small">- {subheading} -</StyledSubHeading>
         </StyledTopBox>
       </TopBox>
       <ContainerBox>
         <WrapperBox>
-          <Heading size="medium" style={{maxWidth: 'unset'}}>{mainpitch.title}</Heading>
+          <Heading size="large" alignSelf="center"  style={{maxWidth: 'unset'}}>{mainpitch.title}</Heading>
           <WideParagraph size="xlarge" margin="none"  alignSelf="center">{mainpitch.description}</WideParagraph>
-          <Heading size="large">{heading}</Heading>
         </WrapperBox>
         <WrapperBox>
+          <Heading size="medium" alignSelf="center">{heading}</Heading>
           <WideParagraph size="medium" alignSelf="center">{description}</WideParagraph>
           <Box margin="medium" justifyContent="center">
             <Features gridItems={intro.blurbs} />
           </Box>
         </WrapperBox>
-        <StyliedButton
-            icon={<Home />}
-            label="My Listings"
-            alignSelf="center"
-            fill={false}
-            href="/products"
-          />
         <WrapperBox>
           <Heading size="medium">Latest stories</Heading>
           <Box margin="medium" justifyContent="center">
@@ -81,12 +79,12 @@ export const IndexPageTemplate = ({
           </Box>
         </WrapperBox>
         <StyliedButton
-            icon={<Inspect />}
-            label="More posts"
-            alignSelf="center"
-            fill={false}
-            href="/blog"
-          />
+          icon={<Inspect />}
+          label="More posts"
+          alignSelf="center"
+          fill={false}
+          href="/blog"
+        />
       </ContainerBox>
     </>
   )

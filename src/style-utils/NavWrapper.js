@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'grommet'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 const NavWrapper = ({ size, children }) => {
     const StyledNav = styled.nav`

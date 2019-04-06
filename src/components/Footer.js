@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Box, Anchor } from 'grommet'
 
 import logo from '../img/logo.svg'
@@ -31,22 +31,22 @@ const social = [
   {
     name: 'facebook',
     image: facebook,
-    url: 'https://facebook.com'
+    url: 'https://facebook.com',
   },
   {
     name: 'twitter',
     image: twitter,
-    url: 'https://twitter.com'
+    url: 'https://twitter.com',
   },
   {
     name: 'instagram',
     image: instagram,
-    url: 'https://instagram.com'
+    url: 'https://instagram.com',
   },
   {
     name: 'vimeo',
     image: vimeo,
-    url: 'https://vimeo.com'
+    url: 'https://vimeo.com',
   },
 ]
 
@@ -55,19 +55,19 @@ const Footer = class extends React.Component {
     return (
       <StyledFooter>
         <img
-            src={logo}
-            alt="Mick Smith real estate logo"
-            style={{ width: '14em', height: '10em', alignSelf: 'center' }}
-          />
+          src={logo}
+          alt="Mick Smith real estate logo"
+          style={{ width: '14em', height: '10em', alignSelf: 'center' }}
+        />
         <Box direction="row" justify="between">
           <div>
-          {
-          this.props.items.map( ({ label , to }) =>(
-            <StyledNavItems key={to} href={to} size="medium" height="100%" margin={{"left": "small"}}>
-            {label}
-            </StyledNavItems>
-          ))
-          }
+            {
+              this.props.items.map( ({ label , to }) =>(
+                <StyledNavItems key={to} href={to} size="medium" height="100%" margin={{'left': 'small'}}>
+                  {label}
+                </StyledNavItems>
+              ))
+            }
           </div>
           <div>
             {
@@ -81,7 +81,7 @@ const Footer = class extends React.Component {
                 </a>
               ))
             }
-            </div>
+          </div>
         </Box>
       </StyledFooter>
     )
