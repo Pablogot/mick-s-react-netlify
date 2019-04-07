@@ -8,6 +8,7 @@ import { Heading, Image } from 'grommet';
 // Style Utils
 import WrapperBox from '../style-utils/WrapperBox';
 
+
 export const AboutPageTemplate = ({
   title, image, content, contentComponent, 
 }) => {

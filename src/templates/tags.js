@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 
+// Style Utils
+import ContainerBox from '../style-utils/ContainerBox';
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
@@ -24,20 +27,13 @@ class TagRoute extends React.Component {
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
-            </div>
-          </div>
+          <ContainerBox>
+            <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+            <ul className="taglist">{postLinks}</ul>
+            <p>
+              <Link to="/tags/">Browse all tags</Link>
+            </p>
+          </ContainerBox>
         </section>
       </Layout>
     );

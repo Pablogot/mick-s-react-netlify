@@ -1,9 +1,8 @@
 import React from 'react';
-import { Box } from 'grommet';
 import styled from '@emotion/styled';
 
 const ContainerBox = ({ children }) => {
-  const StyledBox = styled(Box)`
+  const StyledBox = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: center;

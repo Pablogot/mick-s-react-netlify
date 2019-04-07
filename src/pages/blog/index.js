@@ -4,13 +4,17 @@ import {Grid} from 'grommet';
 import Layout from '../../components/Layout';
 import BlogRoll from '../../components/BlogRoll';
 
+// Style Utils
+import ContainerBox from '../../style-utils/ContainerBox';
+
+
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Grid margin="medium" justifyContent="center">
+        <ContainerBox>
           <BlogRoll />
-        </Grid>
+        </ContainerBox>
       </Layout>
       
     );

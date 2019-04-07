@@ -11,6 +11,7 @@ import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 
 // Style Utils
+import ContainerBox from '../style-utils/ContainerBox';
 import TopBox from '../style-utils/TopBox';
 import WrapperBox from '../style-utils/WrapperBox';
 import WrapperBoxSkewed from '../style-utils/WrapperBoxSkewed';
@@ -59,6 +60,7 @@ export const IndexPageTemplate = ({
           <StyledSubHeading alignSelf="center" size="small">- {subheading} -</StyledSubHeading>
         </StyledTopBox>
       </TopBox>
+      <ContainerBox>
         <WrapperBox>
           <Heading size="large" alignSelf="center"  style={{maxWidth: 'unset'}}>{mainpitch.title}</Heading>
           <Paragraph size="xlarge" margin="none"  alignSelf="center">{mainpitch.description}</Paragraph>
@@ -85,6 +87,7 @@ export const IndexPageTemplate = ({
           href="/blog"
           primary={true}
         />
+      </ContainerBox>
     </>
   );
 };
