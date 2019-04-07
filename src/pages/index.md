@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
-title: Condimentum vitae sapien pellentesque.
+title: Title
 image: /img/brian-babb-256298-unsplash.jpg
-heading: ' Consectetur adipiscing elit'
+heading: Heading
 subheading: Enim facilisis gravida neque convallis a cras semper
 mainpitch:
-  title: Why Me
+  title: Why Me?
   description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Pretium viverra
