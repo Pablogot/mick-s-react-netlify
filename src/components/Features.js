@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-import { Grid, Box, Text } from 'grommet';
+import { Box, Paragraph } from 'grommet';
 
 const FeatureGrid = ({ gridItems }) => (
   <Box direction="row-responsive">
@@ -11,7 +11,7 @@ const FeatureGrid = ({ gridItems }) => (
         <Box>
           <PreviewCompatibleImage imageInfo={item} />
         </Box>
-        <Text>{item.text}</Text>
+        <Paragraph>{item.text}</Paragraph>
       </Box>
     ))}
   </Box>

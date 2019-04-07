@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
   `;
   return (
     <>
-      <TopBox 
+      <TopBox
         image={ 
           image.childImageSharp ? image.childImageSharp.fluid.src : image 
         }>
@@ -69,7 +69,7 @@ export const IndexPageTemplate = ({
         <WrapperBoxSkewed 
           background="rgba(173,241,247,1)">
           <Heading size="medium" alignSelf="center">{heading}</Heading>
-          <WideParagraph size="medium" alignSelf="center">{description}</WideParagraph>
+          <WideParagraph size="xlarge" alignSelf="center">{description}</WideParagraph>
           <Box margin="medium" justifyContent="center">
             <Features gridItems={intro.blurbs} />
           </Box>
@@ -84,8 +84,9 @@ export const IndexPageTemplate = ({
           icon={<Inspect />}
           label="More posts"
           alignSelf="center"
-          fill={false}
+          fill={true}
           href="/blog"
+          primary={true}
         />
       </ContainerBox>
     </>
