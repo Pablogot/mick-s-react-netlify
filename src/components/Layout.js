@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children }) => {
   const menuItems = [
     {
       label:'About', 
-      to: '/about',
+      to: 'about',
     },
     {
       label:'Blog', 

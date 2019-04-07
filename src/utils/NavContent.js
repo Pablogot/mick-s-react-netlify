@@ -19,7 +19,7 @@ const NavContent = ({direction, items}) => {
     <Box direction={direction}>
       {
         items.map( ({ label, to }) => (
-          <StyledNavItems key={to} href={to} size="medium" height="100%" margin={{'left': 'small'}}>
+          <StyledNavItems key={to} href={'./' + to} size="medium" height="100%" margin={{'left': 'small'}}>
             {label}
           </StyledNavItems>
         ))
