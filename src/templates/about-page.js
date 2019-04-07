@@ -6,7 +6,6 @@ import Content, { HTMLContent } from '../components/Content';
 import { Heading, Image } from 'grommet';
 
 // Style Utils
-import ContainerBox from '../style-utils/ContainerBox';
 import WrapperBox from '../style-utils/WrapperBox';
 
 export const AboutPageTemplate = ({
@@ -15,23 +14,19 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <section>
-      <ContainerBox>
-        <WrapperBox>
-          {
-            image && <Image
-              alignSelf="center"
-              fit="cover"
-              style={{borderRadius: '50%'}}
-              src={ image.childImageSharp ? image.childImageSharp.fluid.src : image}
-            />
-          }
-          
-          <Heading size="medium" textAlign="center" style={{maxWidth: 'unset'}}>{title}</Heading>
-          <PageContent className="content" content={content} />
-        </WrapperBox>
-      </ContainerBox>
-    </section>
+    <WrapperBox>
+      {
+        image && <Image
+          alignSelf="center"
+          fit="cover"
+          style={{borderRadius: '50%', maxWidth: '300px' }}
+          src={ image.childImageSharp ? image.childImageSharp.fluid.src : image}
+        />
+      }
+      <Heading size="medium" textAlign="center" style={{maxWidth: 'unset'}}>{title}</Heading>
+      <PageContent className="content" content={content} />
+    </WrapperBox>
+
   );
 };
 

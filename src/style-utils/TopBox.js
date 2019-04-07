@@ -7,6 +7,8 @@ const TopBox = ({ image, children }) => {
     background-image: url(${image});
     background-position: top left;
     background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
     height: 80vh;
     display: flex;
     justify-content: center;

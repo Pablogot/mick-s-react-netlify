@@ -9,8 +9,8 @@ import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
+
 // Style Utils
-import ContainerBox from '../style-utils/ContainerBox';
 import TopBox from '../style-utils/TopBox';
 import WrapperBox from '../style-utils/WrapperBox';
 import WrapperBoxSkewed from '../style-utils/WrapperBoxSkewed';
@@ -47,9 +47,7 @@ export const IndexPageTemplate = ({
   const StyliedButton = styled(Button)`
     max-width: 250px;
   `;
-  const WideParagraph = styled(Paragraph)`
-    width: 1200px !important;
-  `;
+
   return (
     <>
       <TopBox
@@ -61,15 +59,14 @@ export const IndexPageTemplate = ({
           <StyledSubHeading alignSelf="center" size="small">- {subheading} -</StyledSubHeading>
         </StyledTopBox>
       </TopBox>
-      <ContainerBox>
         <WrapperBox>
           <Heading size="large" alignSelf="center"  style={{maxWidth: 'unset'}}>{mainpitch.title}</Heading>
-          <WideParagraph size="xlarge" margin="none"  alignSelf="center">{mainpitch.description}</WideParagraph>
+          <Paragraph size="xlarge" margin="none"  alignSelf="center">{mainpitch.description}</Paragraph>
         </WrapperBox>
         <WrapperBoxSkewed 
           background="rgba(173,241,247,1)">
           <Heading size="medium" alignSelf="center">{heading}</Heading>
-          <WideParagraph size="xlarge" alignSelf="center">{description}</WideParagraph>
+          <Paragraph size="xlarge" alignSelf="center">{description}</Paragraph>
           <Box margin="medium" justifyContent="center">
             <Features gridItems={intro.blurbs} />
           </Box>
@@ -88,7 +85,6 @@ export const IndexPageTemplate = ({
           href="/blog"
           primary={true}
         />
-      </ContainerBox>
     </>
   );
 };

@@ -6,7 +6,10 @@ import './all.sass';
 import useSiteMetadata from './SiteMetadata';
 import { hpe } from 'grommet-theme-hpe';
 
-import { grommet, Grommet, Box, ResponsiveContext} from 'grommet';
+import { Grommet, Box} from 'grommet';
+
+// Style Utils
+import ContainerBox from '../style-utils/ContainerBox';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -67,7 +70,9 @@ const TemplateWrapper = ({ children }) => {
       <Grommet theme={hpe}>
         <Navbar items={menuItems}/>
         <Box fill>
-          {children}
+          <ContainerBox>
+            {children}
+          </ContainerBox>
         </Box>
         <Footer items={menuItems}/>
       </Grommet>
