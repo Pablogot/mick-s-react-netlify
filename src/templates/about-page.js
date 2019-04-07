@@ -22,6 +22,7 @@ export const AboutPageTemplate = ({
           image && <Image
             alignSelf="center"
             fit="cover"
+            margin={{'vertical': 'large'}}
             style={{borderRadius: '50%', maxWidth: '300px' }}
             src={ image.childImageSharp ? image.childImageSharp.fluid.src : image}
           />
