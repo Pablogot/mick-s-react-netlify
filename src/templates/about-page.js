@@ -18,11 +18,16 @@ export const AboutPageTemplate = ({
     <section>
       <ContainerBox>
         <WrapperBox>
-          <Image
-            fit="cover"
-            src={image.childImageSharp ? image.childImageSharp.fluid.src : image}
-          />
-          <Heading size="medium" style={{maxWidth: 'unset'}}>{title}</Heading>
+          {
+            image && <Image
+              alignSelf="center"
+              fit="cover"
+              style={{borderRadius: '50%'}}
+              src={ image.childImageSharp ? image.childImageSharp.fluid.src : image}
+            />
+          }
+          
+          <Heading size="medium" textAlign="center" style={{maxWidth: 'unset'}}>{title}</Heading>
           <PageContent className="content" content={content} />
         </WrapperBox>
       </ContainerBox>
