@@ -13,7 +13,11 @@ const TopBox = ({ image, children }) => {
     display: flex;
     justify-content: center;
   `;
-  return <StyledBox animation="fadeIn">{children}</StyledBox>;
+  return <StyledBox animation={{
+    'type': 'fadeIn',
+    'delay': 1500,
+    'duration': 1000,
+  }}>{children}</StyledBox>;
 };
 
 export default TopBox;
