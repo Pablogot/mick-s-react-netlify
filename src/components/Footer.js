@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { Box, Anchor } from 'grommet';
+import { Box, Anchor, Image } from 'grommet';
 
 import logo from '../img/logo.svg';
 import facebook from '../img/social/facebook.svg';
@@ -16,6 +15,7 @@ const StyledFooter = styled.footer`
     flex-flow: column;
     align-items: center;
     margin-top: 100px;
+    padding-bottom: 30px;
     background-color: #F8F8F8;
   `;
 const StyledNavItems = styled(Anchor)`
@@ -69,7 +69,7 @@ const Footer = class extends React.Component {
         />
         <WrapperBox>
           <Box direction="row" justify="between">
-            <div>
+            <Box direction="row">
               {
                 this.props.items.map( ({ label, to }) => (
                   <StyledNavItems 
@@ -77,22 +77,22 @@ const Footer = class extends React.Component {
                     href={to} 
                     size="medium" 
                     height="100%" 
-                    margin={{'left': 'small'}}>
+                    margin={{'left': 'medium'}}>
                     {label}
                   </StyledNavItems>
                 ))
               }
-            </div>
+            </Box>
             <div>
               {
                 social.map(({ name, image, url }) => (
-                  <a key={name} title={name} href={url}>
-                    <img
+                  <Anchor key={name} title={name} href={url} margin={{'horizontal': '.5rem' }}>
+                    <Image
                       src={image}
                       alt={name}
                       style={{ width: '1em', height: '1em' }}
                     />
-                  </a>
+                  </Anchor>
                 ))
               }
             </div>
