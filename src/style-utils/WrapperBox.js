@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 const WrapperBox = ({ children }) => {
   const StyledBox = styled(Box)`
     width: calc( 100% - 20%);
+    max-width: 1100px;
   `;
   return (
     <StyledBox>{children}</StyledBox>

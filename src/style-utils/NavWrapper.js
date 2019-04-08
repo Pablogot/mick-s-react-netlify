@@ -16,6 +16,7 @@ const NavWrapper = ({ size, children }) => {
   `;
   const StyledContainerBox = styled(Box)`
     width: calc( 100% - ${size === 'small' ? '10%' : '20%'});
+    max-width: 1100px;
   `;
   return (
     <StyledNav role="navigation" aria-label="main-navigation">

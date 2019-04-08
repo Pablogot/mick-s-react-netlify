@@ -26,8 +26,10 @@ export const IndexPageTemplate = ({
   intro,
 }) => {
   const StyledTopBox = styled(Box)`
+    max-width: 1150px;
     margin: 0 3rem;
     border: .5rem solid #ffffff;
+    padding: 1rem;
     background: rgba(0, 0, 0, 0.15);
     transform: skew(-5deg);
   `;
@@ -55,7 +57,7 @@ export const IndexPageTemplate = ({
         image={ 
           image.childImageSharp ? image.childImageSharp.fluid.src : image 
         }>
-        <StyledTopBox>
+        <StyledTopBox alignSelf="center">
           <StyledHeading alignSelf="center" size="medium">{title}</StyledHeading>
           <StyledSubHeading alignSelf="center" size="small">- {subheading} -</StyledSubHeading>
         </StyledTopBox>

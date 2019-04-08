@@ -7,23 +7,23 @@ import styled from '@emotion/styled';
 const WrapperBoxSkewed = ({ background, children }) => {
     
   const StyledBox = styled(Box)`
+    width: 100vw;
     margin: 10vw 0;
     background: ${background};
-    display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
   `;
   const StyledBoxContent = styled(Box)`
     margin: 5vw 0;
     width: calc( 100% - 20%);
+    max-width: 1100px;
   `;
   const StyledSvg = styled.svg`
     width: 100%;
     height: 7vw;
   `;
   return (
-    <StyledBox>
+    <StyledBox justify="center">
       <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon fill="white" points="0,100 100,0 0,0"/>
       </StyledSvg>
