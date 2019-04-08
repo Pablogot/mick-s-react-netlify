@@ -2,8 +2,6 @@ import React from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import { Box, TextInput, TextArea, Button } from 'grommet';
-import styled from '@emotion/styled';
-
 
 function encode(data) {
   return Object.keys(data)
@@ -41,7 +39,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <Box direction="column" justify="center" style={{ alignItems: 'center' }}>
-          <Box style={{ width: 'calc( 100% - 20%)' }}>
+          <Box style={{ width: 'calc( 100% - 20%)', maxWidth: '1100px' }}>
             <h1>Contact</h1>
             <form
               name="contact"
