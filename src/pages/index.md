@@ -5,7 +5,7 @@ image: /img/brian-babb-256298-unsplash.jpg
 heading: Heading
 subheading: Enim facilisis gravida neque convallis a cras semper
 mainpitch:
-  title: Why Me?
+  title: What I do Me?
   description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Pretium viverra
