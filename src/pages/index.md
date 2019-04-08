@@ -26,7 +26,7 @@ intro:
         House for sell, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Amet luctus venenatis
         lectus magna fringilla
-    - image: /img/chemex.jpg
+    - image: /img/marion-michele-770316-unsplash.jpg
       text: >-
         House for sell ipsum, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Amet luctus venenatis
